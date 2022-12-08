@@ -1,0 +1,53 @@
+h1 {
+  font-size: 25px;
+}
+h2 {
+  font-size: 15px;
+}
+p {
+  padding-bottom: 40px;
+}
+
+.container {
+  width: 800px;
+  padding: 40px 60px 40px 60px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.d-flex {
+  width: 300px;
+  padding: 0 0 15px 0;
+  display: block;
+  margin: 0 auto;
+}
+.types {
+  float: right;
+}
+.btn-outline-success {
+  width: 40px;
+}
+.col {
+  border: 1px solid black;
+  padding-bottom: 130px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 0 10px;
+}
+.col:hover {
+  box-shadow: 5px 5px 10px 0px rgba(194, 224, 233, 0.74);
+  border: 1px solid rgb(143, 200, 218);
+}
+.btn {
+  margin: 1px;
+  box-shadow: 5px 5px 15px 0px lightgrey;
+}
+.me-2 {
+  margin-right: 0rem !important;
+  box-shadow: 5px 5px 15px 0px lightgrey;
+}
+.degrees {
+  font-size: 15px;
+  line-height: 3px;
+}
