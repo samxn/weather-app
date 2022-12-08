@@ -51,3 +51,7 @@ p {
   font-size: 15px;
   line-height: 3px;
 }
+.link {
+  text-align: center;
+  display: block;
+}
