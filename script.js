@@ -19,10 +19,13 @@ function dayTime() {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
+  let ampm = hour >= 12 ? "PM" : "AM";
+  hour = hour % 12;
+  hour = hour ? hour : 12;
 
   let element = document.getElementById("dayTime");
   document.getElementById("dayTime");
-  element.innerHTML = `${day}, ${hour}:${minutes}`;
+  element.innerHTML = `${day}, ${hour}:${minutes} ${ampm}`;
   return element;
 }
 dayTime();

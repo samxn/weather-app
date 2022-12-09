@@ -34,6 +34,9 @@ p {
   float: right;
   text-transform: capitalize;
 }
+.time {
+  float: right;
+}
 .btn-outline-success {
   width: 40px;
 }
