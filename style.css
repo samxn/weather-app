@@ -13,11 +13,15 @@ p {
 }
 
 .container {
-  width: 800px;
   padding: 40px 60px 40px 60px;
   border: 1px solid gray;
   border-radius: 10px;
   margin-top: 30px;
+}
+.wrapper {
+  padding: 40px 60px 40px 60px;
+  width: 70%;
+  margin: 30px auto;
 }
 
 .d-flex {
@@ -34,7 +38,7 @@ p {
 }
 .col {
   border: 1px solid gray;
-  padding-bottom: 130px;
+  padding-bottom: 50px;
   text-align: center;
   border-radius: 10px;
   margin: 0 10px;
@@ -55,10 +59,10 @@ p {
   font-size: 15px;
   line-height: 3px;
 }
-.link {
-  text-align: center;
-  display: block;
-}
 .link a {
   text-decoration: none;
+}
+.fa-solid {
+  font-size: 60px;
+  color: gray;
 }

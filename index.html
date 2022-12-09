@@ -15,81 +15,83 @@
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
   </head>
   <body>
-    <div class="container">
-      <form class="d-flex" role="search" id="searchField">
-        <input
-          class="form-control me-2"
-          type="search"
-          placeholder="Type a city..."
-          aria-label="Search"
-          id="searchInput"
-        />
-        <input
-          class="btn btn-primary"
-          type="submit"
-          id="searchBtn"
-          value="Search"
-        />
-        <input
-          class="btn btn-success"
-          type="submit"
-          id="currentWeatherBtn"
-          value="Current"
-        />
-      </form>
-      <h1 class="types" id="dayTime">Day Time</h1>
-      <h1 id="location">Atlanta</h1>
-      <h2 class="types">Partly cloudy</h2>
-      <h1>
-        <b class="temperature" id="farenTemp">62</b>
-        <sup
-          ><a href="#" class="degrees" id="farenheit">°F</a>|<a
-            href="#"
-            class="degrees"
-            id="celcius"
-            >°C</a
-          ></sup
-        >
-      </h1>
-      <p>
-        Precipitation: <span class="stats">0%</span>
-        <br />
-        Humidity: <span class="stats">43%</span>
-        <br />
-        Wind: <span class="stats">2 mph</span>
-      </p>
+    <div class="wrapper">
+      <div class="container">
+        <form class="d-flex" role="search" id="searchField">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Type a city..."
+            aria-label="Search"
+            id="searchInput"
+          />
+          <input
+            class="btn btn-primary"
+            type="submit"
+            id="searchBtn"
+            value="Search"
+          />
+          <input
+            class="btn btn-success"
+            type="submit"
+            id="currentWeatherBtn"
+            value="Current"
+          />
+        </form>
+        <h1 class="types" id="dayTime">Day Time</h1>
+        <h1 id="location">Atlanta</h1>
+        <h2 class="types">Partly cloudy</h2>
+        <h1>
+          <b class="temperature" id="farenTemp">62</b>
+          <sup
+            ><a href="#" class="degrees" id="farenheit">°F</a>|<a
+              href="#"
+              class="degrees"
+              id="celcius"
+              >°C</a
+            ></sup
+          >
+        </h1>
+        <p>
+          Precipitation: <span class="stats">0%</span>
+          <br />
+          Humidity: <span class="stats">43%</span>
+          <br />
+          Wind: <span class="stats">2 mph</span>
+        </p>
 
-      <div class="row">
-        <div class="col">
-          WED
-          <br />
-          🌤
-        </div>
-        <div class="col">
-          THUR
-          <br />
-          🌤
-        </div>
-        <div class="col">
-          FRI <br />
-          🌤
-        </div>
-        <div class="col">
-          SAT <br />
-          🌤
-        </div>
-        <div class="col">
-          SUN <br />
-          🌤
+        <div class="row">
+          <div class="col">
+            WED
+            <br /><br />
+            <i class="fa-solid fa-cloud-bolt"></i>
+          </div>
+          <div class="col">
+            THUR
+            <br /><br />
+            <i class="fa-solid fa-wind"></i>
+          </div>
+          <div class="col">
+            FRI <br /><br />
+            <i class="fa-solid fa-sun"></i>
+          </div>
+          <div class="col">
+            SAT <br /><br />
+            <i class="fa-solid fa-cloud-showers-heavy"></i>
+          </div>
+          <div class="col">
+            SUN <br /><br />
+            <i class="fa-solid fa-wind"></i>
+          </div>
         </div>
       </div>
-    </div>
-    <span class="link"
-      ><a href="https://github.com/samxn/Weather-app" target="_blank"
-        >Open-source code</a
+      <span class="link"
+        ><a href="https://github.com/samxn/Weather-app" target="_blank"
+          >Open-source code</a
+        >
+        by Samin Dizna</span
       >
-      by Samin Dizna</span
-    >
+    </div>
     <script
       src="https://kit.fontawesome.com/03f4e38d94.js"
       crossorigin="anonymous"
