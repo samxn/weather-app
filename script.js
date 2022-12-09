@@ -30,9 +30,15 @@ dayTime();
 function showWeather(response) {
   let h1 = document.querySelector("#location");
   let mainTemp = document.querySelector("#farenTemp");
+  let descriptionElement = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
   let temperature = Math.round(response.data.main.temp);
   h1.innerHTML = `${response.data.name}`;
   mainTemp.innerHTML = `${temperature}`;
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  descriptionElement.innerHTML = response.data.weather[0].description;
 }
 
 function showPosition(position) {

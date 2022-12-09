@@ -32,6 +32,7 @@ p {
 }
 .types {
   float: right;
+  text-transform: capitalize;
 }
 .btn-outline-success {
   width: 40px;
@@ -47,6 +48,7 @@ p {
   box-shadow: 5px 5px 10px 0px rgba(194, 224, 233, 0.74);
   border: 1px solid rgb(143, 200, 218);
 }
+
 .btn {
   margin: 1px;
   box-shadow: 5px 5px 15px 0px lightgrey;
@@ -56,8 +58,12 @@ p {
   box-shadow: 5px 5px 15px 0px lightgrey;
 }
 .degrees {
-  font-size: 15px;
-  line-height: 3px;
+  top: 18px;
+  vertical-align: top;
+  position: relative;
+}
+.degrees a {
+  text-decoration: none;
 }
 .link a {
   text-decoration: none;
@@ -65,4 +71,7 @@ p {
 .fa-solid {
   font-size: 60px;
   color: gray;
+}
+.temperature {
+  font-size: 50px;
 }
