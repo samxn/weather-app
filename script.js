@@ -21,7 +21,6 @@ function dayTime() {
   }
   let ampm = hour >= 12 ? "PM" : "AM";
   hour = hour % 12;
-  hour = hour ? hour : 12;
 
   let element = document.getElementById("dayTime");
   document.getElementById("dayTime");
@@ -37,13 +36,19 @@ function showWeather(response) {
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   let temperature = Math.round(response.data.main.temp);
+  let iconElement = document.querySelector("#icon");
+
   h1.innerHTML = `${response.data.name}`;
   mainTemp.innerHTML = `${temperature}`;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
   descriptionElement.innerHTML = response.data.weather[0].description;
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
-
 function showPosition(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
@@ -63,11 +68,22 @@ button.addEventListener("click", getCurrentPosition);
 function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let tempElement = document.querySelector("#farenTemp");
-
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
   let h1 = document.querySelector("#location");
-  h1.innerHTML = response.data.name;
+  let descriptionElement = document.querySelector("#description");
+  let iconElement = document.querySelector("#icon");
 
+  h1.innerHTML = response.data.name;
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  descriptionElement.innerHTML = response.data.weather[0].description;
   tempElement.innerHTML = `${temperature}`;
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 /* --- */
