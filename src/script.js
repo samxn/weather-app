@@ -21,6 +21,7 @@ function dayTime() {
   }
   let ampm = hour >= 12 ? "PM" : "AM";
   hour = hour % 12;
+  hour = hour ? hour : 12; // without this 12 becomes 0
 
   let element = document.getElementById("dayTime");
   document.getElementById("dayTime");
@@ -28,6 +29,53 @@ function dayTime() {
   return element;
 }
 dayTime();
+/*-- Days instead of number --*/
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
+/*-- Days forecast --*/
+function displayForcast(response) {
+  let forecast = response.data.daily;
+
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `
+    <div class="col-2">
+      <div>${formatDay(forecastDay.dt)}</div>
+      <img
+      src="http://openweathermap.org/img/wn/${
+        forecastDay.weather[0].icon
+      }@2x.png"
+      alt=""
+      class="otherIcons"
+      />
+      <span class="max-temp">${Math.round(forecastDay.temp.max)}° </span>
+      <span class="min-temp">${Math.round(forecastDay.temp.min)}°</span>
+      </div>
+     
+      `;
+    }
+  });
+
+  forecastHTML = forecastHTML + `</div`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  let apiKey = "3980a7c8f2a782241a093131b099f993";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(displayForcast);
+}
 /* Get current location and temperature */
 function showWeather(response) {
   let h1 = document.querySelector("#location");
@@ -86,6 +134,8 @@ function showTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 }
 
 /* --Search City-- */
@@ -107,7 +157,6 @@ forms.addEventListener("submit", located);
 /* Change Farenheit to Celcius */
 function conversion(change) {
   change.preventDefault();
-  let clicked = document.querySelector(".btn");
 }
 
 function faren(change) {
@@ -126,6 +175,7 @@ function celc(flip) {
 }
 
 searchCity("Atlanta");
+displayForcast();
 
 let object = document.querySelector("#celcius");
 object.addEventListener("click", celc);
