@@ -154,28 +154,5 @@ function searchCity(city) {
 let forms = document.querySelector("#searchField");
 forms.addEventListener("submit", located);
 
-/* Change Farenheit to Celcius */
-function conversion(change) {
-  change.preventDefault();
-}
-
-function faren(change) {
-  change.preventDefault();
-  let clicked = document.querySelector(".temperature");
-  clicked.innerHTML = fahrenheitTemperature;
-}
-
-let element = document.querySelector("#farenheit");
-element.addEventListener("click", faren);
-
-function celc(flip) {
-  flip.preventDefault();
-  let clicked = document.querySelector(".temperature");
-  clicked.innerHTML = Math.round(((fahrenheitTemperature - 32) * 5) / 9);
-}
-
 searchCity("Atlanta");
 displayForcast();
-
-let object = document.querySelector("#celcius");
-object.addEventListener("click", celc);
