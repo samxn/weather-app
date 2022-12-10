@@ -47,14 +47,21 @@ p {
 .btn-outline-success {
   width: 40px;
 }
-.col {
+.col-2 {
   border: 1px solid gray;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
   text-align: center;
   border-radius: 10px;
   margin: 0 10px;
+  width: 14%;
 }
-.col:hover {
+.col-2 img {
+  display: block;
+  justify-content: center;
+  margin: 0 auto;
+  width: 80px;
+}
+.col-2:hover {
   box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.74);
   border: 1px solid rgb(0, 0, 0);
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
@@ -112,4 +119,10 @@ p {
 }
 .tempDegrees a:hover {
   color: #0b5ed7;
+}
+.min-temp {
+  color: gray;
+}
+.weather-forecast {
+  text-align: center;
 }
