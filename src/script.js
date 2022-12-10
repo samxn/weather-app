@@ -64,7 +64,7 @@ function getCurrentPosition() {
 let button = document.querySelector("#currentWeatherBtn");
 button.addEventListener("click", getCurrentPosition);
 
-/* --- */
+/* --Temperature and icon change for searched city-- */
 function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let tempElement = document.querySelector("#farenTemp");
@@ -86,7 +86,7 @@ function showTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-/* --- */
+/* --Search City-- */
 function located(event) {
   event.preventDefault();
   let entered = document.querySelector("#searchInput");
@@ -125,3 +125,5 @@ function celc(flip) {
 
 let object = document.querySelector("#celcius");
 object.addEventListener("click", celc);
+
+/*---*/

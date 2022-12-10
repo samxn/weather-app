@@ -17,6 +17,7 @@ p {
   border: 1px solid gray;
   border-radius: 10px;
   margin-top: 30px;
+  background-color: rgb(210, 227, 238);
 }
 .wrapper {
   padding: 40px 60px 40px 60px;
@@ -34,6 +35,9 @@ p {
   float: right;
   text-transform: capitalize;
 }
+.mainIcon {
+  float: right;
+}
 .time {
   float: right;
 }
@@ -48,14 +52,10 @@ p {
   margin: 0 10px;
 }
 .col:hover {
-  box-shadow: 5px 5px 10px 0px rgba(194, 224, 233, 0.74);
-  border: 1px solid rgb(143, 200, 218);
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.74);
+  border: 1px solid rgb(0, 0, 0);
 }
-.col img {
-  width: 100px;
-  padding: 0 auto;
-  margin: 0 auto;
-}
+
 .btn {
   margin: 1px;
   box-shadow: 5px 5px 15px 0px lightgrey;

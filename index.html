@@ -11,7 +11,7 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="src/style.css" type="text/css" />
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
   </head>
   <body>
@@ -35,15 +35,13 @@
             class="btn btn-success"
             type="submit"
             id="currentWeatherBtn"
-            value="Current"
+            value="📍"
           />
         </form>
         <h1 class="time" id="dayTime">Day Time</h1>
         <h1 id="location">Atlanta</h1>
-        <h2 class="types" id="description">
-          Partly cloudy <br /><br />
-          <i class="fa-solid fa-cloud-bolt"></i>
-        </h2>
+        <h2 class="types" id="description">Partly cloudy <br /><br /></h2>
+
         <h1>
           <b class="temperature" id="farenTemp">62</b>
           <sup class="degrees"
@@ -52,6 +50,12 @@
             ></sup
           >
         </h1>
+        <img
+          src="http://openweathermap.org/img/wn/10d@2x.png"
+          alt="rainy"
+          id="icon"
+          class="mainIcon"
+        />
         <p>
           Precipitation: <span class="stats">0%</span>
           <br />
@@ -66,11 +70,7 @@
           <div class="col">
             Wed
             <br /><br />
-            <img
-              src="http://openweathermap.org/img/wn/10d@2x.png"
-              alt="rainy"
-              id="icon"
-            />
+            <i class="fa-solid fa-wind"></i>
           </div>
           <div class="col">
             Thur
@@ -103,6 +103,6 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="script.js"></script>
+    <script src="src/script.js"></script>
   </body>
 </html>
