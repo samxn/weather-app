@@ -21,6 +21,7 @@ function dayTime() {
   }
   let ampm = hour >= 12 ? "PM" : "AM";
   hour = hour % 12;
+  hour = hour ? hour : 12; // without this 12 becomes 0
 
   let element = document.getElementById("dayTime");
   document.getElementById("dayTime");
@@ -64,8 +65,10 @@ function getCurrentPosition() {
 let button = document.querySelector("#currentWeatherBtn");
 button.addEventListener("click", getCurrentPosition);
 
+let fahrenheitTemperature;
 /* --Temperature and icon change for searched city-- */
 function showTemperature(response) {
+  fahrenheitTemperature = Math.round(response.data.main.temp);
   let temperature = Math.round(response.data.main.temp);
   let tempElement = document.querySelector("#farenTemp");
   let humidityElement = document.querySelector("#humidity");
@@ -111,7 +114,7 @@ function conversion(change) {
 function faren(change) {
   change.preventDefault();
   let clicked = document.querySelector(".temperature");
-  clicked.innerHTML = `62`;
+  clicked.innerHTML = fahrenheitTemperature;
 }
 
 let element = document.querySelector("#farenheit");
@@ -120,8 +123,10 @@ element.addEventListener("click", faren);
 function celc(flip) {
   flip.preventDefault();
   let clicked = document.querySelector(".temperature");
-  clicked.innerHTML = `17`;
+  clicked.innerHTML = Math.round(((fahrenheitTemperature - 32) * 5) / 9);
 }
+
+searchCity("Atlanta");
 
 let object = document.querySelector("#celcius");
 object.addEventListener("click", celc);
