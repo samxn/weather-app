@@ -57,6 +57,7 @@ p {
 .col:hover {
   box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.74);
   border: 1px solid rgb(0, 0, 0);
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
 .btn {
@@ -91,4 +92,10 @@ p {
 }
 .temperature {
   font-size: 50px;
+}
+.tempDegrees a {
+  color: black;
+}
+.tempDegrees a:hover {
+  color: #0b5ed7;
 }
