@@ -29,6 +29,7 @@ function dayTime() {
   return element;
 }
 dayTime();
+
 /*-- Days instead of number --*/
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
@@ -113,6 +114,7 @@ let button = document.querySelector("#currentWeatherBtn");
 button.addEventListener("click", getCurrentPosition);
 
 let fahrenheitTemperature;
+
 /* --Temperature and icon change for searched city-- */
 function showTemperature(response) {
   fahrenheitTemperature = Math.round(response.data.main.temp);
