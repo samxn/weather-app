@@ -125,5 +125,3 @@ function celc(flip) {
 
 let object = document.querySelector("#celcius");
 object.addEventListener("click", celc);
-
-/*---*/
