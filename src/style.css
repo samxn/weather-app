@@ -149,4 +149,23 @@ p {
   .weather-forecast img {
     width: 30px;
   }
+  .d-flex {
+    width: 95%;
+    padding: 0 0 15px 0;
+    display: block;
+    margin: 0 auto;
+  }
+  .col-2 {
+    border: 1px solid gray;
+    padding-bottom: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 0 5px;
+    width: 14%;
+  }
+  .row {
+    margin-right: 0px;
+    margin-left: 0px;
+    flex-wrap: unset;
+  }
 }
