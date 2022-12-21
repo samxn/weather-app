@@ -130,3 +130,23 @@ p {
 .weather-forecast {
   text-align: center;
 }
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 15px;
+  }
+  h2 {
+    font-size: 10px;
+  }
+  p {
+    font-size: 10px;
+  }
+  .wrapper {
+    padding: 40px 60px 40px 60px;
+    width: 100%;
+    margin: 30px auto;
+  }
+  .weather-forecast img {
+    width: 30px;
+  }
+}
