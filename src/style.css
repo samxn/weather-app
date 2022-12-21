@@ -161,11 +161,23 @@ p {
     text-align: center;
     border-radius: 10px;
     margin: 0 5px;
-    width: 14%;
+    width: 20%;
   }
   .row {
     margin-right: 0px;
     margin-left: 0px;
     flex-wrap: unset;
+  }
+  .degrees {
+    top: 18px;
+    vertical-align: top;
+    position: relative;
+  }
+  .container {
+    padding: 40px 30px 40px 30px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin-top: 30px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   }
 }
