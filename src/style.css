@@ -171,7 +171,7 @@ p {
   .degrees {
     top: 18px;
     vertical-align: top;
-    position: relative;
+    position: top;
   }
   .container {
     padding: 40px 30px 40px 30px;
