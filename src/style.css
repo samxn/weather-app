@@ -141,6 +141,9 @@ p {
   p {
     font-size: 10px;
   }
+  img {
+    width: 50px;
+  }
   .wrapper {
     padding: 40px 0px 40px 0px;
     width: 100%;
